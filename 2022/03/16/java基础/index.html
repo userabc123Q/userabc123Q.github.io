@@ -15,7 +15,8 @@
     2.java的基本程序设置
 
 
-1.0一个简单的java应用程">
+
+1.0一个简单的java应用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -483,14 +484,120 @@
     2.java的基本程序设置
 </h1>
 
+
 <h2>1.0一个简单的java应用程序</h2>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sample</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> viod <span class="title function_">main</span><span class="params">(String []args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;hello,world!!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2>1.1注释</h2>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单行注释:<span class="comment">//内容</span></span><br><span class="line">多行注释:<span class="comment">/*内容*/</span></span><br><span class="line">文档注释:<span class="comment">/**内容*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当行注释:<span class="comment">//内容</span></span><br><span class="line">多行注释:<span class="comment">/*内容*/</span></span><br><span class="line">文档注释:<span class="comment">/**内容*/</span></span><br></pre></td></tr></table></figure>
 
+<h2>1.2数据类型</h2>
+
+<h4>1整型</h4>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需要</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>4字节</td>
+<td>-2147483648~2147483647(刚刚超过两亿)</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2字节</td>
+<td>-32768~32678</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8字节</td>
+<td>-9223372036854775808~9223372036854775807</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>1字节</td>
+<td>-128~127</td>
+</tr>
+</tbody></table>
+<h4>2.浮点型</h4>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需要</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4字节</td>
+<td>大约+-  3.402 823 47E+38F(有效位数6~7位)</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节</td>
+<td>大约+- 1.797 693 134 862 315 70E+308(有效数为15位)</td>
+</tr>
+</tbody></table>
+<h4>3.char型</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>型是用于表示单个字符比如:<span class="string">&quot;男&quot;</span>or<span class="string">&quot;女&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4>4.boolean类型</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span>类型有两个值:<span class="literal">true</span>和<span class="literal">false</span>，用来进行判断逻辑条件的。整型和布尔类型之间不能进行相互转换</span><br></pre></td></tr></table></figure>
+
+<h2>1.3变量与常量</h2>
+
+<h4>1.声明变量</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">每一个变量都有一个类型(type)在声明变量时，先指定变量的类型，然后是变量名。示例:</span><br><span class="line"><span class="type">double</span> number;</span><br><span class="line"><span class="type">int</span> number;</span><br><span class="line"><span class="type">long</span> number;</span><br><span class="line"><span class="type">boolean</span> number;</span><br></pre></td></tr></table></figure>
+
+<h4>2.变量初始值</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">声明一个变量后，必须对赋值的语句才能进行显示初始化，不要使用未初始化的变量值</span><br><span class="line">错误示范：</span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">	System.out.println(number);</span><br><span class="line">正确示范:</span><br><span class="line">	<span class="type">int</span> number=<span class="number">1</span>;</span><br><span class="line">	System.out.println(number);</span><br></pre></td></tr></table></figure>
+
+<h4>3.常量</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">在java中，利用关键字<span class="keyword">final</span>指示常量</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sample</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> viod <span class="title function_">main</span><span class="params">(String []args)</span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">double</span> <span class="variable">CM_PER</span> <span class="operator">=</span><span class="number">2.54</span>;</span><br><span class="line">	<span class="type">double</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">1.1</span>;</span><br><span class="line">	<span class="type">double</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">11</span>;</span><br><span class="line">	System.out.println(number*CM_PER+<span class="string">&quot;by&quot;</span>+num*CM_PER);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">关键字<span class="keyword">final</span>表示这个变量只能被赋值一次，一旦赋值后就不能更改了，习惯上，常量名通常为大写。</span><br><span class="line">    要想<span class="keyword">final</span>关键字在一个类的多个方法里面使用，可以使用<span class="keyword">static</span> <span class="keyword">final</span>设置一个类常量：</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sample</span>&#123;</span><br><span class="line">            pudlic <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">double</span> <span class="variable">CM_PER</span> <span class="operator">=</span><span class="number">2.54</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> viod <span class="title function_">main</span><span class="params">(String []args)</span>&#123;</span><br><span class="line">            <span class="type">double</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">1.1</span>;</span><br><span class="line">            <span class="type">double</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">11</span>;</span><br><span class="line">            System.out.println(number*CM_PER+<span class="string">&quot;by&quot;</span>+num*CM_PER);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4>4.枚举类型</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">枚举类型包括有限个命名的值。列如:</span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Size</span> &#123;</span><br><span class="line">    SMALL,MEFIUM,EXTPA_LARGE</span><br><span class="line">&#125;</span><br><span class="line">现在可以声明这种类型的变量了。</span><br><span class="line">    <span class="type">Size</span> <span class="variable">s</span> <span class="operator">=</span> Size.SMALL;</span><br><span class="line">Size类型的变量只能存储这个类型声明中给定的某个枚举值，或者特殊的值<span class="literal">null</span>，<span class="literal">null</span>表示这个变量没有设置任何的值。</span><br></pre></td></tr></table></figure>
+
+<h2>1.4运算符和数值之间的转换</h2>
+
+<h4>1.算术运算符</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在java中，使用算术运算符有：+，-，*，/，%表示为加，减，乘，除，余。</span><br></pre></td></tr></table></figure>
+
+<h4>
+    2.数值之间的合法转换
+</h4>
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>如果两个操作数有一个为<span class="type">double</span>类型的，那么另一个操作数就会转换为<span class="type">double</span>类型。</span><br><span class="line"><span class="number">2.</span>否则，如果其中一个操作数为<span class="type">float</span>类型的，那么另一个也会转换为<span class="type">float</span>类型。</span><br><span class="line"><span class="number">3.</span>否则，如果其中一个操作数为<span class="type">long</span>类型的，那么另一个也会转换为<span class="type">long</span>类型。</span><br><span class="line"><span class="number">4.</span>否则，两个操作数都会转换为<span class="type">int</span>类型。</span><br></pre></td></tr></table></figure>
+
+<h4>3.强制类型转换</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">强制转换的语法格式是在括号里面输入你想装换的类型，后面紧跟着你待转换的变量名。</span><br><span class="line">列如:</span><br><span class="line"><span class="type">double</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">1.2</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">int</span>) number;</span><br><span class="line">如果想对浮点型进行装换的话，以便得到接近的整数，那就需要使用Mat.round()方法</span><br><span class="line">列如:</span><br><span class="line"><span class="type">double</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">1.2</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">int</span>) Mat.round(number);</span><br></pre></td></tr></table></figure>
+
+<h4>4.结合赋值和运算符</h4>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">可以赋值中使用二元运算符</span><br><span class="line">列如:</span><br><span class="line">number += <span class="number">4</span>;</span><br><span class="line">等价于:</span><br><span class="line">number = number + <span class="number">4</span>;</span><br></pre></td></tr></table></figure>
+
+<h4>5.自增与自减运算符
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">两者的作用都是自增加<span class="number">1</span>。</span><br><span class="line">单独拿出来说的话，++i和i++，效果都是一样的，就是i=i+<span class="number">1</span>。</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main1</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	++i;</span><br><span class="line">&#125;</span><br><span class="line">最后的结果都是<span class="number">1</span>。</span><br><span class="line">    --i 是先执行i=i-<span class="number">1</span>,然后再使用i的值, 这时的i 值就是表达式--i的值。</span><br><span class="line">    i-- 是先使用i的值作为表达式i--的值,然后,执行i=i-<span class="number">1</span>操作。</span><br></pre></td></tr></table></figure>
 
                 
             </div>
